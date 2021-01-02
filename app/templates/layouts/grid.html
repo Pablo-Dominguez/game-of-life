@@ -1,0 +1,9 @@
+<table>
+    {% for x in range(search_query | int) %}
+        <tr>
+            <td>
+                <input type="text" value="{{ x }}">
+            </td>
+        </tr>
+    {% endfor %}
+</table>

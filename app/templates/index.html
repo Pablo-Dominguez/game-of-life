@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<!--  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">-->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/normalize.css")}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/skeleton.css")}}">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename="img/favicon.png")}}">
+  
+  <!-- JS files
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="{{ url_for('static', filename="js/grid.js")}}"></script>
+
+</head>
+<body>
+    <!-- Welcome Layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row" style="margin-top: 5%; text-align: center;">
+    <h1>Game of life</h1>
+    <h6>Go find yourself!</h6>
+    </div>
+  </div>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<!--  <div class="container">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 25%">
+        <h4>Basic Page</h4>
+        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+      </div>
+    </div>
+  </div>-->
+  <div class="container" id="main-content">
+  <div class="row" style="margin-top: 8%;">
+    <div class="seven columns">
+    {% if rows and cols %}
+    <img src="{{ svg }}">
+    {% else %}
+    <h2></h2>
+    {% endif %}
+    </div>
+     <div class="five columns">
+        <h5>Game builder</h5>
+        <hr>
+        <form  action="{{ url_for('build_grid')}}" method="post">
+            <input placeholder="Number of rows" type="text" name="getRows" id="getRows" required><input type="submit" value="Submit" >
+        <input placeholder="Number of columns" type="text" name="getCols" id="getCols" required><input type="submit" value="Submit" ></form>
+        <div class="container"  style="text-align:center; margin:0;">
+        <input type="submit" value="Run Game!" class="button-primary">
+        </div>
+    </div>
+    </div>
+    </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
