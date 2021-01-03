@@ -5,9 +5,9 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title>Game of life</title>
+  <meta name="description" content="Game of life, with love &#10084;">
+  <meta name="author" content="Pablo Domínguez">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -23,10 +23,11 @@
   <link rel="stylesheet" href="css/skeleton.css">-->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/normalize.css")}}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/skeleton.css")}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/grid.css")}}">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="{{ url_for('static', filename="img/favicon.png")}}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename="img/alien.png")}}">
   
   <!-- JS files
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -34,12 +35,21 @@
 
 </head>
 <body>
+    {% for message, dis in get_flashed_messages() %}
+    <div class="error-message" >
+        <p style="margin-bottom:0px;">{{ message }}</p>
+    </div>
+    {% endfor %}
+
+
     <!-- Welcome Layout
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-    <div class="row" style="margin-top: 5%; text-align: center;">
+    <div class="row" style="margin-top: 5%; text-align: center;" >
+    <a href="/" style="color: #bfbfbf; text-decoration: none;">
     <h1>Game of life</h1>
     <h6>Go find yourself!</h6>
+    </a>
     </div>
   </div>
 
@@ -57,16 +67,23 @@
   <div class="row" style="margin-top: 8%;">
     <div class="seven columns">
     {% if rows and cols %}
-    <img src="{{ svg }}">
+    <!--<img src="{{ svg }}">-->
+    <h2>{{ rows }}</h2>
     {% else %}
     <h2></h2>
+    <div class=window>
+    <input type=checkbox class=toggle id=punch>
+    <label for=punch>Punch It, Chewie<label>
+    <div><p>Here’s my content. Beep Boop Blurp.</p></div>
+    </div>
     {% endif %}
+    
     </div>
      <div class="five columns">
         <h5>Game builder</h5>
         <hr>
-        <form  action="{{ url_for('build_grid')}}" method="post">
-            <input placeholder="Number of rows" type="text" name="getRows" id="getRows" required><input type="submit" value="Submit" >
+        <form name="getSize" action="{{ url_for('build_grid')}}" method="post">
+            <input placeholder="Number of rows" type="text" name="getRows" id="getRows" required><input type="submit" value="Submit">
         <input placeholder="Number of columns" type="text" name="getCols" id="getCols" required><input type="submit" value="Submit" ></form>
         <div class="container"  style="text-align:center; margin:0;">
         <input type="submit" value="Run Game!" class="button-primary">
