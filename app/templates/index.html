@@ -23,7 +23,10 @@
   <link rel="stylesheet" href="css/skeleton.css">-->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/normalize.css")}}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/skeleton.css")}}">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/grid.css")}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/flash.css")}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/app.css")}}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/freeformatter-out.css")}}">
+<!--  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>-->
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -32,14 +35,20 @@
   <!-- JS files
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="{{ url_for('static', filename="js/grid.js")}}"></script>
+  <script src="{{ url_for('static', filename="js/app.js")}}"></script>
+  <script src="{{ url_for('static', filename="js/flash.min.js")}}"></script>
+  <script src="{{ url_for('static', filename="js/flash.jquery.min.js")}}"></script>
+  <script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>
 
 </head>
 <body>
+
+    <!-- Flash message Layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     {% for message, dis in get_flashed_messages() %}
-    <div class="error-message" >
-        <p style="margin-bottom:0px;">{{ message }}</p>
-    </div>
+    <script>new window.FlashMessage('Please enter only numbers', 'warning');</script>
     {% endfor %}
+
 
 
     <!-- Welcome Layout
@@ -66,18 +75,17 @@
   <div class="container" id="main-content">
   <div class="row" style="margin-top: 8%;">
     <div class="seven columns">
-    {% if rows and cols %}
-    <!--<img src="{{ svg }}">-->
-    <h2>{{ rows }}</h2>
-    {% else %}
-    <h2></h2>
-    <div class=window>
-    <input type=checkbox class=toggle id=punch>
-    <label for=punch>Punch It, Chewie<label>
-    <div><p>Here’s my content. Beep Boop Blurp.</p></div>
-    </div>
-    {% endif %}
+    {% with messages = get_flashed_messages() %}
+    {% if rows and cols and not messages %}  <!--and not messages -->
     
+    <div data-role="tile" data-size="small"></div>
+    <div data-role="tile" data-size="medium"></div>
+    <div data-role="tile" data-size="wide"></div>
+    <div data-role="tile" data-size="large"></div>
+    {% else %}
+    <h3></h3>
+    {% endif %}
+    {% endwith %}
     </div>
      <div class="five columns">
         <h5>Game builder</h5>

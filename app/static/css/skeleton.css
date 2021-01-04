@@ -441,35 +441,5 @@ there.
     font-weight:bold; color:red;
 }
 
-.error-message {
-    margin: auto;
-    margin-top: 12px;
-    max-width: 300px;
-/*     display: none; */
-    text-align: center;
-    z-index: 100;
-    position: relative;
-    border: 3px solid grey;
-    border-radius: 3px;
-    background-color: #e6b566;
-    padding: 7px 0;
-        -webkit-transition:height, 0.5s linear;
-    -moz-transition: height, 0.5s linear;
-    -ms-transition: height, 0.5s linear;
-    -o-transition: height, 0.5s linear;
-    transition: height, 0.5s linear;
-}
 
-.error-message.open {
-        height:200px;
-     -webkit-transition:height, 0.5s linear;
-    -moz-transition: height, 0.5s linear;
-    -ms-transition: height, 0.5s linear;
-    -o-transition: height, 0.5s linear;
-    transition: height, 0.5s linear;
-    }
-    
-input.toggle { display: none; }
-input.toggle ~ div { height: 0px; margin: .2rem; overflow: hidden; }
-input.toggle:checked ~ div { height: 180px; }
 
