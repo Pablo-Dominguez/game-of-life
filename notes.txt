@@ -1,0 +1,4 @@
+56.6666666667%
+
+var element = document.getElementsByClassName("seven columns");
+element[0].offsetWidth

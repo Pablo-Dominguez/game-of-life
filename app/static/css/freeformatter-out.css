@@ -219,10 +219,10 @@
 .tile-medium.transform-right,
 .tile-small.transform-right,
 .tile-wide.transform-right {
-	-webkit-transform-origin: left 50%;
-	transform-origin: left 50%;
-	-webkit-transform: perspective(500px) rotateY(.138372rad)!important;
-	transform: perspective(500px) rotateY(.138372rad)!important
+/*	-webkit-transform-origin: left 50%;
+	transform-origin: left 50%;*/
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateY(.138372rad)!important;*/
+	transform: scale(0.9) !important;/* perspective(500px) rotateY(.138372rad)!important*/
 }
 
 .tile-app.transform-right.tile-small,
@@ -230,8 +230,8 @@
 .tile-medium.transform-right.tile-small,
 .tile-small.transform-right.tile-small,
 .tile-wide.transform-right.tile-small {
-	-webkit-transform: perspective(500px) rotateY(.276744rad)!important;
-	transform: perspective(500px) rotateY(.276744rad)!important
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateY(.276744rad)!important;*/
+	transform:  scale(0.9) !important;/* perspective(500px) rotateY(.138372rad)!important*/
 }
 
 .tile-app.transform-right.tile-wide,
@@ -239,8 +239,8 @@
 .tile-medium.transform-right.tile-wide,
 .tile-small.transform-right.tile-wide,
 .tile-wide.transform-right.tile-wide {
-	-webkit-transform: perspective(500px) rotateY(.069186rad)!important;
-	transform: perspective(500px) rotateY(.069186rad)!important
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateY(.069186rad)!important;*/
+	transform:  scale(0.7) !important;/* perspective(500px) rotateY(.138372rad)!important*/
 }
 
 .tile-app.transform-right.tile-large,
@@ -248,8 +248,8 @@
 .tile-medium.transform-right.tile-large,
 .tile-small.transform-right.tile-large,
 .tile-wide.transform-right.tile-large {
-	-webkit-transform: perspective(500px) rotateY(.046124rad)!important;
-	transform: perspective(500px) rotateY(.046124rad)!important
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateY(.046124rad)!important;*/
+	transform: scale(0.9) !important;/*perspective(500px) rotateY(.046124rad)!important*/
 }
 
 .tile-app.transform-left,
@@ -257,10 +257,10 @@
 .tile-medium.transform-left,
 .tile-small.transform-left,
 .tile-wide.transform-left {
-	-webkit-transform-origin: right 50%;
-	transform-origin: right 50%;
-	-webkit-transform: perspective(500px) rotateY(-.138372rad)!important;
-	transform: perspective(500px) rotateY(-.138372rad)!important
+/*	-webkit-transform-origin: right 50%;
+	transform-origin: right 50%;*/
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateY(-.138372rad)!important;*/
+	transform:scale(0.9) !important;/* perspective(500px) rotateY(-.138372rad)!important*/
 }
 
 .tile-app.transform-left.tile-small,
@@ -268,8 +268,8 @@
 .tile-medium.transform-left.tile-small,
 .tile-small.transform-left.tile-small,
 .tile-wide.transform-left.tile-small {
-	-webkit-transform: perspective(500px) rotateY(-.276744rad)!important;
-	transform: perspective(500px) rotateY(-.276744rad)!important
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateY(-.276744rad)!important;*/
+	transform: scale(0.9) !important;/*perspective(500px) rotateY(-.276744rad)!important*/
 }
 
 .tile-app.transform-left.tile-wide,
@@ -277,8 +277,8 @@
 .tile-medium.transform-left.tile-wide,
 .tile-small.transform-left.tile-wide,
 .tile-wide.transform-left.tile-wide {
-	-webkit-transform: perspective(500px) rotateY(-.069186rad)!important;
-	transform: perspective(500px) rotateY(-.069186rad)!important
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateY(-.069186rad)!important;*/
+	transform: scale(0.9) !important;/*perspective(500px) rotateY(-.069186rad)!important*/
 }
 
 .tile-app.transform-left.tile-large,
@@ -286,8 +286,8 @@
 .tile-medium.transform-left.tile-large,
 .tile-small.transform-left.tile-large,
 .tile-wide.transform-left.tile-large {
-	-webkit-transform: perspective(500px) rotateY(-.046124rad)!important;
-	transform: perspective(500px) rotateY(-.046124rad)!important
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateY(-.046124rad)!important;*/
+	transform: scale(0.9) !important;/*perspective(500px) rotateY(-.046124rad)!important*/
 }
 
 .tile-app.transform-top,
@@ -295,10 +295,10 @@
 .tile-medium.transform-top,
 .tile-small.transform-top,
 .tile-wide.transform-top {
-	-webkit-transform-origin: 50% bottom;
-	transform-origin: 50% bottom;
-	-webkit-transform: perspective(500px) rotateX(.138372rad)!important;
-	transform: perspective(500px) rotateX(.138372rad)!important
+/*	-webkit-transform-origin: 50% bottom;
+	transform-origin: 50% bottom;*/
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateX(.138372rad)!important;*/
+	transform: scale(0.9) !important;/*perspective(500px) rotateX(.138372rad)!important*/
 }
 
 .tile-app.transform-top.tile-small,
@@ -306,8 +306,8 @@
 .tile-medium.transform-top.tile-small,
 .tile-small.transform-top.tile-small,
 .tile-wide.transform-top.tile-small {
-	-webkit-transform: perspective(500px) rotateX(.276744rad)!important;
-	transform: perspective(500px) rotateX(.276744rad)!important
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateX(.276744rad)!important;*/
+	transform: scale(0.9) !important;/*perspective(500px) rotateX(.276744rad)!important*/
 }
 
 .tile-app.transform-top.tile-wide,
@@ -315,8 +315,8 @@
 .tile-medium.transform-top.tile-wide,
 .tile-small.transform-top.tile-wide,
 .tile-wide.transform-top.tile-wide {
-	-webkit-transform: perspective(500px) rotateX(.069186rad)!important;
-	transform: perspective(500px) rotateX(.069186rad)!important
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateX(.069186rad)!important;*/
+	transform: scale(0.9) !important;/*perspective(500px) rotateX(.069186rad)!important*/
 }
 
 .tile-app.transform-top.tile-large,
@@ -324,8 +324,8 @@
 .tile-medium.transform-top.tile-large,
 .tile-small.transform-top.tile-large,
 .tile-wide.transform-top.tile-large {
-	-webkit-transform: perspective(500px) rotateX(.046124rad)!important;
-	transform: perspective(500px) rotateX(.046124rad)!important
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateX(.046124rad)!important;*/
+	transform: scale(0.9) !important;/*perspective(500px) rotateX(.046124rad)!important*/
 }
 
 .tile-app.transform-bottom,
@@ -333,10 +333,10 @@
 .tile-medium.transform-bottom,
 .tile-small.transform-bottom,
 .tile-wide.transform-bottom {
-	-webkit-transform-origin: 50% top;
-	transform-origin: 50% top;
-	-webkit-transform: perspective(500px) rotateX(-.138372rad)!important;
-	transform: perspective(500px) rotateX(-.138372rad)!important
+/*	-webkit-transform-origin: 50% top;
+	transform-origin: 50% top;*/
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateX(-.138372rad)!important;*/
+	transform: scale(0.9) !important;/*perspective(500px) rotateX(-.138372rad)!important*/
 }
 
 .tile-app.transform-bottom.tile-small,
@@ -344,8 +344,8 @@
 .tile-medium.transform-bottom.tile-small,
 .tile-small.transform-bottom.tile-small,
 .tile-wide.transform-bottom.tile-small {
-	-webkit-transform: perspective(500px) rotateX(-.276744rad)!important;
-	transform: perspective(500px) rotateX(-.276744rad)!important
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateX(-.276744rad)!important;*/
+	transform: scale(0.9) !important;/*perspective(500px) rotateX(-.276744rad)!important*/
 }
 
 .tile-app.transform-bottom.tile-wide,
@@ -353,8 +353,8 @@
 .tile-medium.transform-bottom.tile-wide,
 .tile-small.transform-bottom.tile-wide,
 .tile-wide.transform-bottom.tile-wide {
-	-webkit-transform: perspective(500px) rotateX(-.069186rad)!important;
-	transform: perspective(500px) rotateX(-.069186rad)!important
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateX(-.069186rad)!important;*/
+	transform: scale(0.9) !important;/*perspective(500px) rotateX(-.069186rad)!important*/
 }
 
 .tile-app.transform-bottom.tile-large,
@@ -362,8 +362,8 @@
 .tile-medium.transform-bottom.tile-large,
 .tile-small.transform-bottom.tile-large,
 .tile-wide.transform-bottom.tile-large {
-	-webkit-transform: perspective(500px) rotateX(-.046124rad)!important;
-	transform: perspective(500px) rotateX(-.046124rad)!important
+	-webkit-transform: scale(0.9) !important;/*perspective(500px) rotateX(-.046124rad)!important;*/
+	transform: scale(0.9) !important;/*perspective(500px) rotateX(-.046124rad)!important*/
 }
 
 .tiles-grid {

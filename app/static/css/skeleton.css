@@ -441,5 +441,12 @@ there.
     font-weight:bold; color:red;
 }
 
+.tile-small {
+    border-radius: 3px;
+    margin:4px;
+    background: black !important;
+    color: #fff;
+}
+
 
 
