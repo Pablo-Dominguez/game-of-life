@@ -52,7 +52,7 @@
 
      <!-- Placeholder tile element
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div data-role="tile" data-size="small" style="display: none;"></div>
+   <!-- <div data-role="tile" data-size="small" style="display: none;"></div>-->
 
     <!-- Welcome Layout
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -80,16 +80,16 @@
     <div class="seven columns">
     {% with messages = get_flashed_messages() %}
     {% if rows and cols and not messages %}  <!--and not messages -->
-    <div id="main-row" class="tiles-grid">
-        <script src="{{ url_for('static', filename="js/grid.js")}}"></script>
-        <script> 
-        jQuery(document).ready(function() {
-            create_grid( parseInt({{ rows }}), parseInt({{ cols }}));
-        });
-        </script>
+<!--    <div id="main-row" class="tiles-grid">-->
+    <script src="{{ url_for('static', filename="js/grid.js")}}"></script>
+    <script> 
+    jQuery(document).ready(function() {
+        create_grid( parseInt({{ rows }}), parseInt({{ cols }}));
+    });
+    </script>
 <!--        <div data-role="tile" data-size="small"></div>
         <div data-role="tile" data-size="small"></div>-->
-    </div>
+<!--    </div>-->
     {% else %}
     <h3></h3>
     {% endif %}
