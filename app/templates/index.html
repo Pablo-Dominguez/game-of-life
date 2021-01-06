@@ -34,11 +34,12 @@
   
   <!-- JS files
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="{{ url_for('static', filename="js/grid.js")}}"></script>
   <script src="{{ url_for('static', filename="js/app.js")}}"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
   <script src="{{ url_for('static', filename="js/flash.min.js")}}"></script>
-  <script src="{{ url_for('static', filename="js/flash.jquery.min.js")}}"></script>
+<!--   <script src="{{ url_for('static', filename="js/flash.jquery.min.js")}}"></script> -->
   <script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>
+  
 
 </head>
 <body>
@@ -49,7 +50,9 @@
     <script>new window.FlashMessage('Please enter only numbers', 'warning');</script>
     {% endfor %}
 
-
+     <!-- Placeholder tile element
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div data-role="tile" data-size="small" style="display: none;"></div>
 
     <!-- Welcome Layout
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -77,11 +80,16 @@
     <div class="seven columns">
     {% with messages = get_flashed_messages() %}
     {% if rows and cols and not messages %}  <!--and not messages -->
-    
-    <div data-role="tile" data-size="small"></div>
-    <div data-role="tile" data-size="medium"></div>
-    <div data-role="tile" data-size="wide"></div>
-    <div data-role="tile" data-size="large"></div>
+    <div id="main-row" class="tiles-grid">
+        <script src="{{ url_for('static', filename="js/grid.js")}}"></script>
+        <script> 
+        jQuery(document).ready(function() {
+            create_grid( parseInt({{ rows }}), parseInt({{ cols }}));
+        });
+        </script>
+<!--        <div data-role="tile" data-size="small"></div>
+        <div data-role="tile" data-size="small"></div>-->
+    </div>
     {% else %}
     <h3></h3>
     {% endif %}
@@ -103,4 +111,7 @@
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
+<!--<footer>
+
+</footer>-->
 </html>
